@@ -35,8 +35,8 @@ Sysmon logs visible in SIEM
 Endpoint telemetry actively ingesting
 
 ## 6. Security Considerations
+Screenshots were sanitized to remove sensitive internal IP addresses. Host identifiers were retained where necessary to preserve technical clarity for documentation purposes.
 
-Screenshots were sanitized to remove internal IPs. host identifiers were considered, but were needed to be visable for clear documentation. 
 ## 7. Outcome
 A functional multi-host SIEM environment was successfully deployed.
 This environment establishes the foundation for detection engineering and investigation work.
