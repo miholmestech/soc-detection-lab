@@ -5,8 +5,8 @@
 Provision an Ubuntu server and deploy Wazuh to establish a centralized SIEM, then onboard an existing Windows 10 lab endpoint with Sysmon configured to forward telemetry for multi-host detection testing. This documents the deployment of the SIEM infrastructure only. Detection scenarios and investigations built on this environment are documented separately.
 
 ## 2. Environment
-- Ubuntu Server (Wazuh Manager + Dashboard)
-- Wazuh install via CLI 
+- Ubuntu Server VM (base install)
+- Wazuh manager and dashboard installed via CLI
 - Windows 10 endpoint (preconfigured in prior lab project [01-Windows-VM-Setup-and-Baseline](https://github.com/miholmestech/SOC-Analyst-Projects-/tree/main/01-Windows-VM-Setup-and-Baseline))
 - Sysmon configured for endpoint telemetry (preconfigured  for [02-Endpoint-Compromise-Detection-and-Threat-Containment](https://github.com/miholmestech/SOC-Analyst-Projects-/tree/main/02-Endpoint-Compromise-Detection-and-Threat-Containment))
 
