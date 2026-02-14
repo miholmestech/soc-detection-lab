@@ -8,19 +8,22 @@ Provision an Ubuntu server and deploy Wazuh to establish a centralized SIEM, the
 - Ubuntu Server (Wazuh Manager + Dashboard)
 - Wazuh install via CLI 
 - Windows endpoint
-- Sysmon configured for endpoint telemetry (configured perviously for Endpoint Compromise Detection & Threat Containment ([02-Endpoint-Compromise-Detection-and-Threat-Containment]))
-
+- Sysmon configured for endpoint telemetry (configured perviously for [02-Endpoint-Compromise-Detection-and-Threat-Containment](02-Endpoint-Compromise-Detection-and-Threat-Containment))
 
 ## 3. Steps Taken
 
 
-## 4. Validation
+
+## 4. What went wrong? 
 
 
-## 5. Security Considerations
+## 5. Validation
+
+
+## 6. Security Considerations
 
 Screenshots were sanitized to remove internal IPs. host identifiers were considered by were needed for clear documentation. 
-## 6. Outcome
+## 7. Outcome
 Establish a working SIEM environment before moving into investigation and detection work.
 Next steps will include:
 - Investigating telemetry
