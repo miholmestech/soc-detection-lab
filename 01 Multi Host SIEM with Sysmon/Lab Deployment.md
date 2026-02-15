@@ -127,8 +127,9 @@ First, I checked whether Sysmon logs were visible inside Wazuh.
   - Sysmon was not installed  
   - Sysmon logs were not being forwarded  
   - Wazuh was not configured to read the correct log source
+ 
+  [01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20220444.png](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20220444.png)
 
- [Screenshot](01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20220444.png)
 #### Confirm Sysmon Installation
 
 I verified whether Sysmon was installed on the Windows endpoint.
@@ -154,10 +155,12 @@ This indicated that Sysmon was functioning locally but the Wazuh agent was not c
   <log_format>eventchannel</log_format>
 </localfile>`
 
+
 Saved the configuration file.
 Restarted the Wazuh agent service: Restart-Service WazuhSvc
 Validation After restarting the agent, Sysmon logs began appearing in Wazuh. Endpoint telemetry confirmed in dashboard. Multi-source log ingestion validated.
 This confirmed successful integration of Sysmon telemetry into the SIEM environment.
+
 ---
 
 ## 4. Validation
