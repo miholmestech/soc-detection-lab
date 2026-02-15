@@ -98,18 +98,22 @@ This marked the first troubleshooting phase within the active lab environment.
 Although the Windows agent appeared in the Wazuh dashboard, it failed to fully connect to the manager.  
 This indicated that the agent could see the server but was not properly configured to communicate with it.
 
-After investigation, I identified that the Wazuh agent configuration on the Windows endpoint still contained the default manager address.
+After investigation, I identified that the Wazuh agent configuration on the Windows endpoint still contained the default manager address. 
+ ![image](01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20213117.png)
+
 
 To resolve this:
 
 1. Located the Wazuh agent configuration file on the Windows VM: `C:\Program Files (x86)\ossec-agent\ossec.conf`
 2. Opened the file using **Notepad as Administrator**
 3. Updated the manager IP address to match the Ubuntu Wazuh server:
+
 `xml
 <server>
 <address>SERVER-IP-HERE</address>
 </server>`
-4. Saved the file and restarted the Wazuh agent service via PowerShell: Restart-Service WazuhSvc
+
+4. Saved the file and restarted the Wazuh agent service via PowerShell: `Restart-Service WazuhSvc` 
 5. After restarting the service, the agent successfully established communication with the Wazuh manager and began sending telemetry to the dashboard.
 
 This confirmed successful multi-host SIEM communication between the Ubuntu server and Windows endpoint.
