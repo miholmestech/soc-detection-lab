@@ -128,7 +128,7 @@ First, I checked whether Sysmon logs were visible inside Wazuh.
   - Sysmon logs were not being forwarded  
   - Wazuh was not configured to read the correct log source
  
-  [01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20220444.png](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20220444.png)
+  [Sysmon not found ](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20220444.png)
 
 #### Confirm Sysmon Installation
 
