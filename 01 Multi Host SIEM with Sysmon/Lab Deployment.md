@@ -1,8 +1,11 @@
 # SIEM Deployment & Log Ingestion
+---
 
 ## 1. Objective
 
 Provision an Ubuntu server and deploy Wazuh to establish a centralized SIEM, then onboard an existing Windows 10 lab endpoint with Sysmon configured to forward telemetry for multi-host detection testing. This documents the deployment of the SIEM infrastructure only. Detection scenarios and investigations built on this environment are documented separately.
+
+---
 
 ## 2. Environment
 - Ubuntu Server VM (base install)
@@ -10,7 +13,11 @@ Provision an Ubuntu server and deploy Wazuh to establish a centralized SIEM, the
 - Windows 10 endpoint (preconfigured in prior lab project [01-Windows-VM-Setup-and-Baseline](https://github.com/miholmestech/SOC-Analyst-Projects-/tree/main/01-Windows-VM-Setup-and-Baseline))
 - Sysmon configured for endpoint telemetry (preconfigured  for [02-Endpoint-Compromise-Detection-and-Threat-Containment](https://github.com/miholmestech/SOC-Analyst-Projects-/tree/main/02-Endpoint-Compromise-Detection-and-Threat-Containment))
 
+---
+
 ## 3.🛠️ Steps Taken: Wazuh Multi-Host SIEM Lab Deployment
+
+---
 
 ### 1. Download and Install Ubuntu Server
 
@@ -22,8 +29,6 @@ Since the purpose of this system was to function as a **multi-host SIEM server**
 - Changed VM network mode to **Bridged Adapter**
 
 This allows the Ubuntu server to communicate directly with other machines on the same network instead of being hidden behind NAT.
-
----
 
 ### 2. Update and Prepare the System
 
@@ -55,12 +60,13 @@ Dashboard URL: `https://<server-ip>`
 Username: `admin`
 
 Password: `Randomly generated password`
+
 ### 4. Accessing the Wazuh Dashboard 
 From my host machine browser, I navigated to: `https://<server-ip>`
 After logging in with the generated credentials, I confirmed the dashboard was operational and Ubuntu logs were successfully visible.
 At this point, the SIEM server was fully deployed.
 
-### 5.### 5. Adding a Windows Endpoint
+### 5. Adding a Windows Endpoint
 
 To build a **multi-host SIEM environment**, I added a **Windows 10 VM** as an endpoint.
 
@@ -78,8 +84,6 @@ Steps taken:
 When a VM uses NAT, it hides behind the host machine.  
 Bridged mode allows each VM to appear as its own device on the network so the SIEM server and endpoint can communicate directly.
 
----
-
 ### 6. First Troubleshooting Phase
 
 The Windows agent appeared in Wazuh but was unable to fully connect.
@@ -89,7 +93,6 @@ The Windows agent appeared in Wazuh but was unable to fully connect.
 
 This marked the first troubleshooting phase within the active lab environment.
 
----
 ### 7. Troubleshooting: Windows Agent Connection Failure
 
 Although the Windows agent appeared in the Wazuh dashboard, it failed to fully connect to the manager.  
@@ -101,20 +104,21 @@ To resolve this:
 
 1. Located the Wazuh agent configuration file on the Windows VM: `C:\Program Files (x86)\ossec-agent\ossec.conf`
 2. Opened the file using **Notepad as Administrator**
-3. Updated the manager IP address to match the Ubuntu Wazuh server: `xml
+3. Updated the manager IP address to match the Ubuntu Wazuh server:
+`xml
 <server>
-  <address>SERVER-IP-HERE</address>
+<address>SERVER-IP-HERE</address>
 </server>`
 4. Saved the file and restarted the Wazuh agent service via PowerShell: Restart-Service WazuhSvc
-5.  After restarting the service, the agent successfully established communication with the Wazuh manager and began sending telemetry to the dashboard.
+5. After restarting the service, the agent successfully established communication with the Wazuh manager and began sending telemetry to the dashboard.
 
 This confirmed successful multi-host SIEM communication between the Ubuntu server and Windows endpoint.
 
-##8 
+### 8.
 
 
 
-
+---
 ## 4. Issues Encountered
 
 Installation delays
