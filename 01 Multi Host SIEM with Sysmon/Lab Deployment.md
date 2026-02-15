@@ -190,4 +190,4 @@ Next Steps
 - Build detection logic
 - Develop alert scenarios
 
-Check out more screenshot of my process [here](https://github.com/miholmestech/soc-detection-lab/tree/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots)
+Check out more screenshots of my process [here](https://github.com/miholmestech/soc-detection-lab/tree/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots)
