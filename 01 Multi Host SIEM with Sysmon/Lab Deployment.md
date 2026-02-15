@@ -100,7 +100,7 @@ This indicated that the agent could see the server but was not properly configur
 
 After investigation, I identified that the Wazuh agent configuration on the Windows endpoint still contained the default manager address. 
 
-![image](01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20213117.png)
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20213117.png)
 
 
 To resolve this:
