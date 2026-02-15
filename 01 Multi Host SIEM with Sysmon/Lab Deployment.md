@@ -142,6 +142,7 @@ However, Wazuh was not ingesting Sysmon logs into the SIEM.
 This indicated that Sysmon was functioning locally but the Wazuh agent was not configured to read the correct event channel.
 
 ### Resolution
+
 1. Located the Wazuh agent configuration file on the Windows VM: `C:\Program Files (x86)\ossec-agent\ossec.conf`
 2. Opened the file using **Notepad as Administrator**
 3. Added/verified the Sysmon event channel entry:
@@ -156,7 +157,7 @@ Validation After restarting the agent, Sysmon logs began appearing in Wazuh. End
 This confirmed successful integration of Sysmon telemetry into the SIEM environment.
 ---
 
-## 5. Validation
+## 4. Validation
 
 Wazuh dashboard accessible
 
@@ -166,10 +167,10 @@ Sysmon logs visible in SIEM
 
 Endpoint telemetry actively ingesting
 
-## 6. Security Considerations
+## 5. Security Considerations
 Screenshots were sanitized to remove sensitive internal IP addresses. Host identifiers were retained where necessary to preserve technical clarity for documentation purposes.
 
-## 7. Outcome
+## 6. Outcome
 A functional multi-host SIEM environment was successfully deployed.
 This environment establishes the foundation for detection engineering and investigation work.
 Next Steps
