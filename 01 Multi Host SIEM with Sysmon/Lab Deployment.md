@@ -161,6 +161,8 @@ Restarted the Wazuh agent service: Restart-Service WazuhSvc
 Validation After restarting the agent, Sysmon logs began appearing in Wazuh. Endpoint telemetry confirmed in dashboard. Multi-source log ingestion validated.
 This confirmed successful integration of Sysmon telemetry into the SIEM environment.
 
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20232710.png)
+
 ---
 
 ## 4. Validation
