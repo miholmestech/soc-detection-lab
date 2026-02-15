@@ -15,13 +15,13 @@ Provision an Ubuntu server and deploy Wazuh to establish a centralized SIEM, the
 
 ---
 
-## 3.🛠️ Steps Taken: Wazuh Multi-Host SIEM Lab Deployment
+## 3. Steps Taken: Wazuh Multi-Host SIEM Lab Deployment
 
 ---
 
 ### 3.1 Download and Install Ubuntu Server
 
-Step one was downloading the **Ubuntu Server 24.04.3 LTS LTS ISO**.  
+Step one was downloading the **Ubuntu Server 24.04.3 LTS ISO**.  
 I attached the Ubuntu `.iso` file to a virtual machine, started the VM, and completed the Ubuntu Server installation.
 
 Since the purpose of this system was to function as a **multi-host SIEM server**, I immediately configured networking:
@@ -155,15 +155,6 @@ Restarted the Wazuh agent service: Restart-Service WazuhSvc
 Validation After restarting the agent, Sysmon logs began appearing in Wazuh. Endpoint telemetry confirmed in dashboard. Multi-source log ingestion validated.
 This confirmed successful integration of Sysmon telemetry into the SIEM environment.
 ---
-## 4. Issues Encountered
-
-Installation delays
-
-Service startup problems
-
-Agent registration issues
-
-Dashboard access troubleshooting
 
 ## 5. Validation
 
