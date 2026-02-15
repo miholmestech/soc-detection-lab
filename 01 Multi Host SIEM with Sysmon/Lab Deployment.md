@@ -127,7 +127,8 @@ First, I checked whether Sysmon logs were visible inside Wazuh.
   - Sysmon was not installed  
   - Sysmon logs were not being forwarded  
   - Wazuh was not configured to read the correct log source
-    [Screenshot 2026-02-10 220444.png](01 Multi Host SIEM with Sysmon/Screenshots/Screenshot 2026-02-10 220444.png)
+
+  [Sysmon logs](01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20220444.png)
     
 
 #### Confirm Sysmon Installation
@@ -148,11 +149,13 @@ This indicated that Sysmon was functioning locally but the Wazuh agent was not c
 1. Located the Wazuh agent configuration file on the Windows VM: `C:\Program Files (x86)\ossec-agent\ossec.conf`
 2. Opened the file using **Notepad as Administrator**
 3. Added/verified the Sysmon event channel entry:
+
 `xml
 <localfile>
   <location>Microsoft-Windows-Sysmon/Operational</location>
   <log_format>eventchannel</log_format>
-</localfile>'
+</localfile>`
+
 Saved the configuration file.
 Restarted the Wazuh agent service: Restart-Service WazuhSvc
 Validation After restarting the agent, Sysmon logs began appearing in Wazuh. Endpoint telemetry confirmed in dashboard. Multi-source log ingestion validated.
