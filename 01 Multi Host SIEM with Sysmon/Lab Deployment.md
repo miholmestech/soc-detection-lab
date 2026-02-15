@@ -135,6 +135,7 @@ I verified whether Sysmon was installed on the Windows endpoint.
 - Confirmed Sysmon service was present  
 - Confirmed logs existed locally
 - Using Event Viewer: Applications and Services Logs → Microsoft → Windows → Sysmon → Operational
+
 Both Sysmon and the Wazuh agent were confirmed to be running on the Windows 10 endpoint.  
 However, Wazuh was not ingesting Sysmon logs into the SIEM.
 
