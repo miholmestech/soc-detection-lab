@@ -114,10 +114,45 @@ To resolve this:
 
 This confirmed successful multi-host SIEM communication between the Ubuntu server and Windows endpoint.
 
-### 3.8 Sysmon addition for threat detection 
+### 3.8 Sysmon Integration for Threat Detection
 
+After the Windows agent successfully connected to the Wazuh manager, the next step was confirming that **Sysmon telemetry** was being ingested into the SIEM.
 
+#### Initial Validation
 
+First, I checked whether Sysmon logs were visible inside Wazuh.
+
+- No Sysmon logs appeared in the Wazuh dashboard  
+- This indicated either:
+  - Sysmon was not installed  
+  - Sysmon logs were not being forwarded  
+  - Wazuh was not configured to read the correct log source  
+
+#### Confirm Sysmon Installation
+
+I verified whether Sysmon was installed on the Windows endpoint.
+
+- Confirmed Sysmon service was present  
+- Confirmed logs existed locally
+- Using Event Viewer: Applications and Services Logs → Microsoft → Windows → Sysmon → Operational
+Both Sysmon and the Wazuh agent were confirmed to be running on the Windows 10 endpoint.  
+However, Wazuh was not ingesting Sysmon logs into the SIEM.
+
+This indicated that Sysmon was functioning locally but the Wazuh agent was not configured to read the correct event channel.
+
+### Resolution
+1. Located the Wazuh agent configuration file on the Windows VM: `C:\Program Files (x86)\ossec-agent\ossec.conf`
+2. Opened the file using **Notepad as Administrator**
+3. Added/verified the Sysmon event channel entry:
+`xml
+<localfile>
+  <location>Microsoft-Windows-Sysmon/Operational</location>
+  <log_format>eventchannel</log_format>
+</localfile>'
+Saved the configuration file.
+Restarted the Wazuh agent service: Restart-Service WazuhSvc
+Validation After restarting the agent, Sysmon logs began appearing in Wazuh. Endpoint telemetry confirmed in dashboard. Multi-source log ingestion validated.
+This confirmed successful integration of Sysmon telemetry into the SIEM environment.
 ---
 ## 4. Issues Encountered
 
