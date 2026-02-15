@@ -19,7 +19,7 @@ Provision an Ubuntu server and deploy Wazuh to establish a centralized SIEM, the
 
 ---
 
-### 1. Download and Install Ubuntu Server
+### 3.1 Download and Install Ubuntu Server
 
 Step one was downloading the **Ubuntu Server 24.04.3 LTS LTS ISO**.  
 I attached the Ubuntu `.iso` file to a virtual machine, started the VM, and completed the Ubuntu Server installation.
@@ -30,7 +30,7 @@ Since the purpose of this system was to function as a **multi-host SIEM server**
 
 This allows the Ubuntu server to communicate directly with other machines on the same network instead of being hidden behind NAT.
 
-### 2. Update and Prepare the System
+### 3.2 Update and Prepare the System
 
 After installation, I opened the terminal and ensured Ubuntu had all updates and required packages installed.
 
@@ -38,7 +38,7 @@ After installation, I opened the terminal and ensured Ubuntu had all updates and
 
 `sudo apt install curl unzip wget apt-transport-https -y`
 
-### 3. Install Wazuh via CLI
+### 3.3 Install Wazuh via CLI
 
 Wazuh provides a single-node install script that installs:
 
@@ -61,12 +61,12 @@ Username: `admin`
 
 Password: `Randomly generated password`
 
-### 4. Accessing the Wazuh Dashboard 
+### 3.4 Accessing the Wazuh Dashboard 
 From my host machine browser, I navigated to: `https://<server-ip>`
 After logging in with the generated credentials, I confirmed the dashboard was operational and Ubuntu logs were successfully visible.
 At this point, the SIEM server was fully deployed.
 
-### 5. Adding a Windows Endpoint
+### 3.5 Adding a Windows Endpoint
 
 To build a **multi-host SIEM environment**, I added a **Windows 10 VM** as an endpoint.
 
@@ -84,7 +84,7 @@ Steps taken:
 When a VM uses NAT, it hides behind the host machine.  
 Bridged mode allows each VM to appear as its own device on the network so the SIEM server and endpoint can communicate directly.
 
-### 6. First Troubleshooting Phase
+### 3.6 First Troubleshooting Phase
 
 The Windows agent appeared in Wazuh but was unable to fully connect.
 
@@ -93,7 +93,7 @@ The Windows agent appeared in Wazuh but was unable to fully connect.
 
 This marked the first troubleshooting phase within the active lab environment.
 
-### 7. Troubleshooting: Windows Agent Connection Failure
+### 3.7 Troubleshooting: Windows Agent Connection Failure
 
 Although the Windows agent appeared in the Wazuh dashboard, it failed to fully connect to the manager.  
 This indicated that the agent could see the server but was not properly configured to communicate with it.
@@ -114,7 +114,7 @@ To resolve this:
 
 This confirmed successful multi-host SIEM communication between the Ubuntu server and Windows endpoint.
 
-### 8.
+### 3.8 Sysmon addition for threat detection 
 
 
 
