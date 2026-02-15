@@ -181,10 +181,7 @@ Sysmon logs visible in SIEM
 
 Endpoint telemetry actively ingesting
 
-## 5. Security Considerations
-Screenshots were sanitized to remove sensitive internal IP addresses. Host identifiers were retained where necessary to preserve technical clarity for documentation purposes.
-
-## 6. Outcome
+## 5. Outcome
 A functional multi-host SIEM environment was successfully deployed.
 This environment establishes the foundation for detection engineering and investigation work.
 Next Steps
@@ -192,3 +189,5 @@ Next Steps
 - Write Windows and Linux investigation reports
 - Build detection logic
 - Develop alert scenarios
+
+Check out more screenshot of my process [here](https://github.com/miholmestech/soc-detection-lab/tree/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots)
