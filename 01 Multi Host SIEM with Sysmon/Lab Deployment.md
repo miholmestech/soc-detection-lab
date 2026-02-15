@@ -118,6 +118,7 @@ To resolve this:
 5. After restarting the service, the agent successfully established communication with the Wazuh manager and began sending telemetry to the dashboard.
 
 This confirmed successful multi-host SIEM communication between the Ubuntu server and Windows endpoint.
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-10%20215230.png)
 
 ### 3.8 Sysmon Integration for Threat Detection
 
