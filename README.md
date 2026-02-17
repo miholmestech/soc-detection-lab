@@ -19,6 +19,4 @@ Build and document a realistic SOC lab where I can:
 - **Detection use cases:** Step-by-step attack simulations and alert generation  
 - **Investigation workflows:** Timelines, pivot fields, and findings  
 - **Lessons learned:** What I’d improve in a real SOC environment
-  
-## Where to start?
-Start [here](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Lab%20Deployment.md)
+
