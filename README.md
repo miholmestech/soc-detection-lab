@@ -13,6 +13,30 @@ Build and document a realistic SOC lab where I can:
 - Create concrete detection use cases (RDP, SSH, PowerShell, etc.)  
 - Practice structuring investigations like a junior SOC analyst  
 
+---
+
+## Lab Architecture Overview
+
+This lab simulates a small monitored enterprise environment with a separate attacker system to generate realistic detection scenarios and investigation workflows.
+
+### Monitored Stack
+- Windows 10 endpoint with **Sysmon** and **Wazuh agent**
+- Ubuntu Wazuh server (**SIEM and log analysis**)
+- Network detection layer *(planned)*: **Suricata IDS**
+
+### Adversary System
+- Kali Linux VM used as an **external attacker host**
+- Intentionally **not enrolled** in Wazuh or endpoint monitoring
+- Used to simulate:
+  - network scans
+  - brute force attempts
+  - suspicious traffic
+  - other adversary behaviors
+
+This separation mirrors real-world SOC conditions, where malicious activity originates outside the monitored environment and must be detected through network and endpoint telemetry rather than direct visibility into the attacker system.
+
+---
+
 ## What You’ll Find Here
 
 - **Environment setup:** How I deployed Wazuh, added agents, and verified telemetry  
@@ -27,6 +51,3 @@ Build and document a realistic SOC lab where I can:
 **Michelle Holmes**  
 *SOC Analyst | Blue Team Focus*  
 [GitHub](https://github.com/miholmestech) | [LinkedIn](https://www.linkedin.com/in/michelle-holmes-252441291/)
-
----
-
