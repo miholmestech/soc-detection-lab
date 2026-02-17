@@ -29,5 +29,4 @@ Build and document a realistic SOC lab where I can:
 [GitHub](https://github.com/miholmestech) | [LinkedIn](https://www.linkedin.com/in/michelle-holmes-252441291/)
 
 ---
-**#BlueTeam #SOCAnalyst #Cybersecurity** – Built to land SOC roles 🚀
 
