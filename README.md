@@ -22,7 +22,7 @@ Build and document a realistic SOC lab where I can:
 
 ---
 
-## 👩‍💻 Author
+## 👩🏿‍💻 Author
 
 **Michelle Holmes**  
 *SOC Analyst | Blue Team Focus*  
@@ -30,3 +30,4 @@ Build and document a realistic SOC lab where I can:
 
 ---
 **#BlueTeam #SOCAnalyst #Cybersecurity** – Built to land SOC roles 🚀
+
