@@ -149,7 +149,7 @@ This attacker VM now allows me to:
 
 -Run future investigations
 
-*This system will be used in upcoming SOC lab projects and detection testing.*
+ ### *This system will be used in upcoming SOC lab projects and detection testing.*
 
 
 
