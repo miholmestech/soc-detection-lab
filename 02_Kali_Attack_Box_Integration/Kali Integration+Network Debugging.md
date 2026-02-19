@@ -20,10 +20,12 @@ To accomplish this, I designed a segmented network using a **dual-adapter config
 ### Kali VM
 - Adapter 1: NAT → internet access (updates/tools)
 - Adapter 2: Host-Only → attacker-to-victim traffic
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/02_Kali_Attack_Box_Integration/Screenshots/Screenshot%202026-02-18%20200734.png)
 
 ### Windows 10 VM
 - Adapter 1: Connected to SIEM network (for Wazuh telemetry)
 - Adapter 2: Host-Only network (for attacker communication)
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/02_Kali_Attack_Box_Integration/Screenshots/Screenshot%202026-02-18%20200820.png)
 
 This allows Kali to simulate attacker behavior while keeping the SIEM environment isolated.
 
@@ -31,11 +33,13 @@ This allows Kali to simulate attacker behavior while keeping the SIEM environmen
 
 ## Initial Lab State
 
-- Windows 10 endpoint  
-  - Sysmon installed  
-  - Logs forwarding to Wazuh  
+- Windows 10 endpoint
+- Sysmon installed  
+- Logs forwarding to Wazuh  
 - Ubuntu Wazuh SIEM server  
 - Kali Linux attacker VM (stand-alone)
+  
+ ![image](https://github.com/miholmestech/soc-detection-lab/blob/main/01%20Multi%20Host%20SIEM%20with%20Sysmon/Screenshots/Screenshot%202026-02-14%20184636.png)
 
 ---
 
@@ -87,6 +91,8 @@ Kali and Windows could now communicate.
 
 Kali previously had internet access but lost it after adapter changes.
 
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/02_Kali_Attack_Box_Integration/Screenshots/Screenshot%202026-02-17%20230128.png)
+
 Troubleshooting steps:
 
 1. Boot Kali 
@@ -114,10 +120,16 @@ Steps taken:
 4. Rebooted Kali
 5. Confirmed DHCP lease assignment
 
-After restarting network manager:
+### After restarting network manager:
 
 -Kali received a valid NAT IP and internet connectivity restored
+
 -Host-only communication remained intact
+
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/02_Kali_Attack_Box_Integration/Screenshots/Screenshot%202026-02-18%20114052.png)
+
+![image](https://github.com/miholmestech/soc-detection-lab/blob/main/02_Kali_Attack_Box_Integration/Screenshots/Screenshot%202026-02-18%20113454.png)
+
 
 ## Lessons Learned
 
