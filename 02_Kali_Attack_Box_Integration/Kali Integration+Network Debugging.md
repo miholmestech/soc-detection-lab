@@ -122,20 +122,31 @@ After restarting network manager:
 ## Lessons Learned
 
 -Network segmentation matters. 
+
 -Adapter planning determines whether a lab behaves realistically.
+
 -Windows blocks ICMP by default
+
 -Firewall rules must be manually enabled for testing.
+
 -Dual adapters can conflict so prepared. 
+
 -Host-only networks can override DHCP behavior if not configured carefully.
+
 -Troubleshooting is just apart of the process.
 
 ## Lab Impact
 
 This attacker VM now allows me to:
+
 -Simulate attacker activity from Kali
+
 -Generate telemetry into Wazuh
+
 -Trigger RDP-based alerts
+
 -Build detection engineering scenarios
+
 -Run future investigations
 
 *This system will be used in upcoming SOC lab projects and detection testing.*
