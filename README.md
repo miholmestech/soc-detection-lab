@@ -1,48 +1,82 @@
+
 # SOC Detection Lab
 
-This lab showcases how I use a SIEM to detect and investigate real security events across a small multi-host environment (Windows + Linux).
+This repository documents a hands-on SOC detection lab built to simulate how security analysts monitor, detect, and investigate real activity across a small multi-host environment.
 
-Why a multi-host environment? Because I had the knowledge to build one and it was time to turn theory into hands-on experience.  
-Look around. Be kind. You’re inside my brain.
+Windows and Linux systems send telemetry into a centralized SIEM while a separate attacker machine generates realistic activity for detection testing.
+
+Why a multi-host environment? Because I had the knowledge to build one — and it was time to turn theory into hands-on experience.
+
+*Look around. Be kind. You’re inside my brain.*
+
+---
 
 ## Objective
 
 Build and document a realistic SOC lab where I can:
 
 - Collect telemetry from multiple endpoints into a central SIEM  
+- Expand attack surface to improve detection fidelity  
 - Create concrete detection use cases (RDP, SSH, PowerShell, etc.)  
 - Practice structuring investigations like a junior SOC analyst  
+- Iterate on lab design as new requirements emerge  
 
 ---
 
 ## Lab Architecture Overview
 
-This lab simulates a small monitored enterprise environment with a separate attacker system to generate realistic detection scenarios and investigation workflows.
+This lab simulates a small monitored enterprise network with separate infrastructure for telemetry collection and adversary simulation.
 
-### Monitored Stack
-- Windows 10 endpoint with **Sysmon** and **Wazuh agent**
-- Ubuntu Wazuh server (**SIEM and log analysis**)
-- Network detection layer *(planned)*: **Suricata IDS**
+### Monitored Environment
+
+- Windows 10 endpoint with Sysmon + Wazuh agent  
+- Dedicated Linux endpoint for clean telemetry and investigation prep  
+- Ubuntu Wazuh server (manager, indexer, dashboard)
 
 ### Adversary System
-- Kali Linux VM used as an **external attacker host**
-- Intentionally **not enrolled** in Wazuh or endpoint monitoring
-- Used to simulate:
-  - network scans
-  - brute force attempts
-  - suspicious traffic
-  - other adversary behaviors
 
-This separation mirrors real-world SOC conditions, where malicious activity originates outside the monitored environment and must be detected through network and endpoint telemetry rather than direct visibility into the attacker system.
+- Kali Linux VM used as an external attacker  
+- Not enrolled in Wazuh monitoring  
+- Used to generate realistic activity including:
+  - RDP attempts  
+  - SSH brute-force attempts  
+  - Network scans  
+  - Suspicious traffic  
+
+This separation mirrors real-world SOC conditions where malicious activity originates outside the monitored environment and must be detected through endpoint and network telemetry rather than direct visibility into the attacker system.
+
+---
+
+## Repository Structure
+
+```
+01_Multi_Host_SIEM_with_Sysmon
+    Initial lab deployment and telemetry validation
+
+02_Kali_Attack_Box_Integration
+    Attacker VM setup and network segmentation
+
+03_Linux_Endpoint_Telemetry_Integration
+    Dedicated endpoint added to improve log clarity and investigation accuracy
+
+04_RDP_Investigation
+    Detection and investigation workflow (in progress)
+
+05_SSH_Investigation
+    Upcoming Linux-focused detection scenarios
+```
 
 ---
 
 ## What You’ll Find Here
 
-- **Environment setup:** How I deployed Wazuh, added agents, and verified telemetry  
-- **Detection use cases:** Step-by-step attack simulations and alert generation  
-- **Investigation workflows:** Timelines, pivot fields, and findings  
-- **Lessons learned:** What I’d improve in a real SOC environment
+- Environment deployment and configuration  
+- Detection engineering experiments  
+- Investigation workflows and timelines  
+- Lessons learned from lab iteration  
+- Architecture decisions made along the way  
+
+This lab is intentionally iterative. As detection needs evolve, the environment evolves with it.
 
 ---
 
