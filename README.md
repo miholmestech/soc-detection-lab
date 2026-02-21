@@ -5,7 +5,7 @@ This repository documents a hands-on SOC detection lab built to simulate how sec
 
 Windows and Linux systems send telemetry into a centralized SIEM while a separate attacker machine generates realistic activity for detection testing.
 
-Why a multi-host environment? Because I had the knowledge to build one — and it was time to turn theory into hands-on experience.
+Why a multi-host environment? Because I had the knowledge to build one so it was time to turn theory into hands-on experience.
 
 *Look around. Be kind. You’re inside my brain.*
 
@@ -76,7 +76,7 @@ This separation mirrors real-world SOC conditions where malicious activity origi
 - Lessons learned from lab iteration  
 - Architecture decisions made along the way  
 
-This lab is intentionally iterative. As detection needs evolve, the environment evolves with it.
+This lab is always a work in progress. As detection needs evolve, the environment evolves with it.
 
 ---
 
