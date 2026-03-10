@@ -1,6 +1,10 @@
 ## Adding a Dedicated Linux Endpoint
 
-**Module Goal**: Deployed a dedicated Linux endpoint for high‑quality SSH telemetry, reducing noise from attacking the Wazuh server itself. Enables brute‑force detection, login analysis, and persistence hunting with clean, multi‑host context.
+**Module Goal**: While preparing for SSH and ongoing RDP attack simulations, I realized attacking the Wazuh server added too much background noise from system processes.  
+
+To get cleaner logs and make investigations easier, I deloyed a dedicated Linux endpoint and integrated it into Wazuh.  
+
+This gives better-quality logs for future detection exercises and lets me run more controlled attack simulations across multiple endpoints.
 
 **New Agent Details**:
 - OS: Ubuntu 24.04.4 LTS VM.  
