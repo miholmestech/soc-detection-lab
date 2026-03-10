@@ -1,12 +1,11 @@
 ## Adding a Dedicated Linux Endpoint
 
-While preparing for SSH and ongoing RDP attack simulations, I realized attacking the Wazuh server added too much background noise from system processes.  
+**Module Goal**: Deployed a dedicated Linux endpoint for high‑quality SSH telemetry, reducing noise from attacking the Wazuh server itself. Enables brute‑force detection, login analysis, and persistence hunting with clean, multi‑host context.
 
-To get cleaner logs and make investigations easier, I added a dedicated Linux endpoint and integrated it into Wazuh.  
-
-This gives better-quality logs for future detection exercises and lets me run more controlled attack simulations across multiple endpoints.
+**New Agent Details**:
+- OS: Ubuntu 24.04.4 LTS VM.  
 
 ![Ubuntu agent added](https://github.com/miholmestech/soc-detection-lab/blob/main/03_Linux_Endpoint_Telemetry_Integration/Screenshots/ubuntu-agent.png)
 
-Now I have two active agents—Linux Ubuntu and Windows 10, establishing multi-host telemetry.
+Now I have two active agents: Linux Ubuntu and Windows 10, establishing multi-host telemetry.
 ![2 Active Agents](https://github.com/miholmestech/soc-detection-lab/blob/main/03_Linux_Endpoint_Telemetry_Integration/Screenshots/2%20agents%20setup.png)
