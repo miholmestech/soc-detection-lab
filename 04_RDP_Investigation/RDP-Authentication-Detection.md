@@ -2,13 +2,15 @@ Attack originated from segmented Kali attacker VM [see integration here](https:/
 
 ---
 
-# RDP Authentication Detection & NLA Telemetry Analysis
+# RDP Authentication Detection & NLA Telemetry Analysis (Detection Engineering Lab)
+
+This lab focuses on how RDP authentication attempts are logged in a Windows 10 + NLA environment and how to design SIEM rules that correctly detect brute‑force activity.
 
 ---
 
 ## 1. Objective
 
-Develop and test detection logic for unauthorized RDP authentication attempts and evaluate how environmental controls (such as Network Level Authentication - NLA) impact authentication telemetry visibility.
+Develop and test detection logic for unauthorized RDP authentication attempts, and evaluate how environmental controls (such as Network Level Authentication – NLA) impact Windows logon telemetry and SIEM visibility.
 
 ---
 
