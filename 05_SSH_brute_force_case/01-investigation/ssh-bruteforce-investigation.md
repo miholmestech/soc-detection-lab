@@ -74,7 +74,7 @@ The output revealed repeated authentication failures originating from the attack
 Each login attempt created a new SSH connection attempt, which is typical in brute-force activity. Connections were observed from multiple source ports, including 64091 and 53556.
 
 
-![image](../Screenshots/01-ssh-failed-auth.log.png)
+![SSH Failed Authentication Log Evidence](../Screenshots/01-ssh-failed-auth.log.png)
 
 
 ## MITRE ATT&CK Mapping
@@ -88,18 +88,18 @@ Each login attempt created a new SSH connection attempt, which is typical in bru
 This activity maps primarily to **Credential Access**, where adversaries attempt to obtain valid credentials by repeatedly guessing passwords.
 
 
-![image](../Screenshots/03-ssh-password-guessing.png)
+![Wazuh MITRE Mapping – Password Guessing](../Screenshots/03-ssh-password-guessing.png)
 
 
-![image](../Screenshots/04-ssh-password-guessing.png)
+![Wazuh MITRE Mapping – Password Guessing](../Screenshots/04-ssh-password-guessing.png)
 
 
-![image](../Screenshots/06-brute-force-ssh.png)
+![Wazuh MITRE Mapping – Brute Force](../Screenshots/06-brute-force-ssh.png)
 
 It also relates to **Lateral Movement**, since SSH is a remote service commonly used by attackers to move between systems once valid credentials are obtained.
 
 
-![image](../Screenshots/05-ssh.png)
+![Wazuh MITRE Mapping – Remote Service:SSH](../Screenshots/05-ssh.png)
 
 
 ---
