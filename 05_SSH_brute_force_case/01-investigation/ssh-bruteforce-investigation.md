@@ -69,7 +69,7 @@ Command used:
 ```
 grep "Failed password" /var/log/auth.log
 ```
-he output revealed repeated authentication failures originating from the attacker IP 192.168.56.1.
+The output revealed repeated authentication failures originating from the attacker IP 192.168.56.1.
 
 Each login attempt created a new SSH connection attempt, which is typical in brute-force activity. Connections were observed from multiple source ports, including 64091 and 53556.
 
