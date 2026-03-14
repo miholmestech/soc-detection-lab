@@ -87,8 +87,14 @@ Each login attempt created a new SSH connection attempt, which is typical in bru
 
 This activity maps primarily to **Credential Access**, where adversaries attempt to obtain valid credentials by repeatedly guessing passwords.
 
+![image](../Screenshots/03-ssh-password-guessing.png)
+
+![image]()
+![image]()
+
 It also relates to **Lateral Movement**, since SSH is a remote service commonly used by attackers to move between systems once valid credentials are obtained.
 
+![image]()
 ---
 
 ## Recommendations
