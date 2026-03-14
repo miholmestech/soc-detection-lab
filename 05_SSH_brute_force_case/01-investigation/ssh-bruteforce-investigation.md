@@ -89,7 +89,7 @@ This activity maps primarily to **Credential Access**, where adversaries attempt
 
 ![image](../Screenshots/03-ssh-password-guessing.png)
 
-![image]()
+![image](../Screenshots/04-ssh-password-guessing.png)
 ![image]()
 
 It also relates to **Lateral Movement**, since SSH is a remote service commonly used by attackers to move between systems once valid credentials are obtained.
