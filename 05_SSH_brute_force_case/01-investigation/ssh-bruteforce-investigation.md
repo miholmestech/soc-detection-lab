@@ -74,7 +74,7 @@ he output revealed repeated authentication failures originating from the attacke
 Each login attempt created a new SSH connection attempt, which is typical in brute-force activity. Connections were observed from multiple source ports, including 64091 and 53556.
 
 
-![image](./05_SSH_brute_force_case/Screenshots/01-ssh-failed-auth.log.png)
+![image](../Screenshots/01-ssh-failed-auth.log.png)
 
 
 ## MITRE ATT&CK Mapping
