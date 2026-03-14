@@ -95,6 +95,7 @@ This activity maps primarily to **Credential Access**, where adversaries attempt
 It also relates to **Lateral Movement**, since SSH is a remote service commonly used by attackers to move between systems once valid credentials are obtained.
 
 ![image](../Screenshots/05-ssh.png)
+
 ---
 
 ## Recommendations
