@@ -1,4 +1,4 @@
-# RDP Authentication Case Study
+# RDP Brute Force Case Study
 
 This scenario demonstrates the SOC workflow for analyzing Remote Desktop Protocol (RDP) authentication telemetry and developing detection logic for suspicious login activity.
 
