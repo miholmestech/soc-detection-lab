@@ -84,7 +84,7 @@ Multiple incorrect passwords were intentionally entered in order to generate rep
 
 The repeated login attempts produced multiple authentication failure events. These failures represent the behavior expected during an SSH brute force attempt where an attacker repeatedly guesses credentials.
 
-![SSH brute force simulation](../Screenshots/ssh-attack-attempts.png)
+![SSH brute force simulation](../Screenshots/14-ssh-attack.png)
 
 ### Endpoint Log Evidence
 
@@ -97,7 +97,7 @@ Failed password for michelle from 192.168.56.104 port 41556 ssh2
 
 These authentication failures were collected by the **Wazuh agent** running on the Ubuntu endpoint and forwarded to the Wazuh manager for analysis.
 
-![SSH authentication failures in auth.log](../Screenshots/ssh-auth-log.png)
+![SSH authentication failures in auth.log](../Screenshots/01-ssh-failed-auth.log.png)
 
 ### Detection Rule Deployment
 
@@ -105,9 +105,12 @@ A custom Wazuh correlation rule was created within the manager configuration to 
 
 The rule monitors for authentication failure events and triggers when the threshold condition is met.
 
-Example rule configuration:
-<rule id="100100" level="10" frequency="5" timeframe="120"> <if_matched_sid>5760</if_matched_sid> <same_source_ip /> </rule> ```
+[Wazuh Custom rule](../Screenshots/07-ssh-Custom-Wazuh-rule.png)
 
+Example rule configuration:
+```
+<rule id="100100" level="10" frequency="5" timeframe="120"> <if_matched_sid>5760</if_matched_sid> <same_source_ip /> </rule>
+```
 This rule triggers when:
 
 5 authentication failures
@@ -131,6 +134,9 @@ Description: Possible SSH brute force attack detected
 Source IP: 192.168.56.104
 
 Target Account: michelle
+
+![image](../Screenshots/10-ssh-rule.png)
+
 
 ## Validation Result
 
