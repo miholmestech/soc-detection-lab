@@ -50,8 +50,8 @@ This separation mirrors real-world SOC conditions where malicious activity origi
 | [01_Multi_Host_SIEM_with_Sysmon](./01%20Multi%20Host%20SIEM%20with%20Sysmon/) | Initial lab deployment and telemetry validation |
 | [02_Kali_Attack_Box_Integration](./02_Kali_Attack_Box_Integration/) | Attacker VM setup and network segmentation |
 | [03_Linux_Endpoint_Telemetry_Integration](./03_Linux_Endpoint_Telemetry_Integration/) | Dedicated endpoint added to improve log clarity and investigation accuracy |
-| [04_RDP_Brute_Force_Case](./04_RDP_brute_force_case/) | Detection and investigation workflow|
-| [05_SSH_Brute_Force_Case](./05_SSH_brute_force_case/) | Detection and investigation workflow|
+| [04_RDP_brute_force_case](./04_RDP_brute_force_case/) | Detection and investigation workflow |
+| [05_SSH_brute_force_case](./05_SSH_brute_force_case/) | Detection and investigation workflow |
 
 ---
 
