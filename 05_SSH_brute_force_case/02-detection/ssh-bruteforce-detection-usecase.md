@@ -57,9 +57,6 @@ THEN:
 
 ---
 
-
----
-
 ## MITRE ATT&CK Mapping
 
 | Tactic | Technique | ID |
@@ -105,7 +102,10 @@ A custom Wazuh correlation rule was created within the manager configuration to 
 
 The rule monitors for authentication failure events and triggers when the threshold condition is met.
 
+
 [Wazuh Custom rule](../Screenshots/07-ssh-Custom-Wazuh-rule.png)
+
+
 
 Example rule configuration:
 ```
