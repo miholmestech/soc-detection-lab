@@ -4,7 +4,7 @@ This repository documents a hands-on SOC detection lab built to simulate how sec
 
 Windows and Linux systems send telemetry into a centralized SIEM while a separate attacker machine generates realistic activity for detection testing.
 
-Why a multi-host environment? Because I had the knowledge to build one so it was time to turn theory into hands-on experience.
+Why a multi-host environment? Because I had the foundational knowledge to build one, it was time to turn theory into hands-on experience.
 
 *Look around. Be kind. You're inside my brain.*
 
@@ -14,7 +14,7 @@ Why a multi-host environment? Because I had the knowledge to build one so it was
 
 Build and document a realistic SOC lab where I can:
 - Collect telemetry from multiple endpoints into a central SIEM  
-- Expand attack surface to improve detection fidelity  
+- Expand the lab attack surface to test detection logic across multiple systems.  
 - Create concrete detection use cases (RDP, SSH, PowerShell, etc.)  
 - Practice structuring investigations like a junior SOC analyst  
 - Iterate on lab design as new requirements emerge  
@@ -27,7 +27,7 @@ This lab simulates a small monitored enterprise network with separate infrastruc
 
 ### Monitored Environment
 - Windows 10 endpoint with Sysmon + Wazuh agent  
-- Dedicated Linux endpoint for clean telemetry and investigation prep  
+- Dedicated Linux endpoint to generate cleaner telemetry and support investigation workflows.
 - Ubuntu Wazuh server (manager, indexer, dashboard)
 
 ### Adversary System
@@ -50,8 +50,8 @@ This separation mirrors real-world SOC conditions where malicious activity origi
 | [01_Multi_Host_SIEM_with_Sysmon](./01%20Multi%20Host%20SIEM%20with%20Sysmon/) | Initial lab deployment and telemetry validation |
 | [02_Kali_Attack_Box_Integration](./02_Kali_Attack_Box_Integration/) | Attacker VM setup and network segmentation |
 | [03_Linux_Endpoint_Telemetry_Integration](./03_Linux_Endpoint_Telemetry_Integration/) | Dedicated endpoint added to improve log clarity and investigation accuracy |
-| [04_RDP_Brute Force Case](./04_RDP_brute_force_case/) | Detection and investigation workflow|
-| [05_SSH_Brute Force Case](./05_SSH_brute_force_case/) | Detection and investigation workflow|
+| [04_RDP_Brute_Force_Case](./04_RDP_brute_force_case/) | Detection and investigation workflow|
+| [05_SSH_Brute_Force_Case](./05_SSH_brute_force_case/) | Detection and investigation workflow|
 
 ---
 
