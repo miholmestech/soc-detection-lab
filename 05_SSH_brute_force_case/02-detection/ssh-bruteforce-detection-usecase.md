@@ -124,6 +124,7 @@ This rule triggers when:
 - originate from the **same source IP**
 - within a **120 second window**
 
+---
 
 ### Alert Generation
 
@@ -143,6 +144,7 @@ Target Account: michelle
 
 ![image](../Screenshots/10-ssh-rule.png)
 
+---
 
 ## Validation Result
 
