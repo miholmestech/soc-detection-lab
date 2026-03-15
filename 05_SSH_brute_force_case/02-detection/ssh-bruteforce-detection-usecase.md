@@ -88,8 +88,11 @@ The repeated login attempts produced multiple authentication failure events. The
 The failed authentication attempts were recorded in the Linux authentication log:
 `/var/log/auth.log`
 
-Example log entries:
+Example log entry:
+
+```
 Failed password for michelle from 192.168.56.104 port 41556 ssh2
+```
 
 
 These authentication failures were collected by the **Wazuh agent** running on the Ubuntu endpoint and forwarded to the Wazuh manager for analysis.
@@ -108,18 +111,21 @@ The rule monitors for authentication failure events and triggers when the thresh
 
 
 Example rule configuration:
+```xml
+<rule id="100100" level="10" frequency="5" timeframe="120">
+  <if_matched_sid>5760</if_matched_sid>
+  <same_source_ip />
+</rule>
 ```
-<rule id="100100" level="10" frequency="5" timeframe="120"> <if_matched_sid>5760</if_matched_sid> <same_source_ip /> </rule>
-```
+
 This rule triggers when:
 
-5 authentication failures
+- **5 authentication failures**
+- originate from the **same source IP**
+- within a **120 second window**
 
-originate from the same source IP
 
-within a 120 second window
-
-Alert Generation
+### Alert Generation
 
 After the attack simulation was performed, the Wazuh SIEM successfully generated a detection alert indicating a potential SSH brute force attack.
 
@@ -148,10 +154,11 @@ Once the defined threshold was reached, the custom correlation rule triggered a 
 
 To reduce false positives in production environments, detection thresholds may require adjustment. 
 Potential tuning strategies include:
--Adjusting the failed login threshold
--Increasing or decreasing the time window
--Excluding trusted administrative IP ranges
--Monitoring login attempts against privileged accounts separately
+
+- Adjusting the failed login threshold
+- Increasing or decreasing the time window
+- Excluding trusted administrative IP ranges
+- Monitoring login attempts against privileged accounts separately
 
 ## Detection Outcome
 
